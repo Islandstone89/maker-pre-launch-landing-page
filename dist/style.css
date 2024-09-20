@@ -136,4 +136,23 @@ textarea:not([rows]) {
   --space-800: var(--size-48);
   --space-900: var(--size-56);
   --space-1000: var(--size-72);
+}
+
+/* UTILITIES */
+.visually-hidden {
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+}
+
+.flow {
+  --flow-space: var(--space-100);
+}
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1rem);
 }/*# sourceMappingURL=style.css.map */
