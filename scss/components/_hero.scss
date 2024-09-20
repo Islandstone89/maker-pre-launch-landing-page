@@ -21,3 +21,15 @@
     color: var(--clr-accent-100);
     font-style: normal;
 }
+
+.hero__text {
+    --flow-space: var(--space-400);
+}
+
+.hero__icon {
+    --flow-space: var(--space-600);
+
+    @include u.breakpoint(xlarge) {
+        --flow-space: var(--space-1000);
+    }
+}

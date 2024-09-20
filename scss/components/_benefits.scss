@@ -3,3 +3,27 @@
 
 /* BENEFITS SECTION STYLES */
 
+.benefits {
+    --grid-gap:  var(--space-900);
+    --columns: 1;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    gap: var(--grid-gap);
+
+    @include u.breakpoint(medium) {
+        --grid-gap: var(--space-400);
+    }
+
+    @include u.breakpoint(large) {
+        --columns: 4;
+        --grid-gap: var(--space-1200);
+    }
+}
+
+.benefit {
+    --grid-gap: var(--space-600);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: var(--grid-gap);
+}

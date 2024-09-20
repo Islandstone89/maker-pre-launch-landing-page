@@ -8,6 +8,19 @@ body {
     font-size: var(--fs-100);
     font-weight: var(--fw-medium);
     line-height: var(--lh-500);
+
+    --max-width: 70rem;
+    --content-margin: 4rem;
+    display: grid;
+    grid-template-columns: 
+    [fb-start]1fr 
+    [content-start] minmax(min(100% - var(--content-margin)), var(--max-width)) 
+    [content-end] 1fr
+    [fb-end];
+
+    & > * {
+        grid-column: content;
+    }
 }
 
 :is(h1, h2, h3) {
