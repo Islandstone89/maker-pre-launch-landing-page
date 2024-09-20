@@ -4,4 +4,21 @@
 body {
     background-color: var(--clr-primary-300);
     color: var(--clr-primary-200);
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-medium);
+    line-height: var(--lh-500);
 }
+
+:is(h1, h2, h3) {
+    color: var(--clr-primary-100);
+    font-weight: var(--fw-extra-bold);
+    line-height: var(--lh-400);
+}
+
+/*
+    16px - 25 = 1.66 (113)
+    18px - 25 = 1.39 (31)
+    32px - 44 - 1.375 (7)
+    40px - 55 = 1.375 (9)
+    48px - 56 = 1.16 (5)
+*/
