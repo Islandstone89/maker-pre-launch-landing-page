@@ -1,0 +1,23 @@
+
+@use '../globals/utilities' as u;
+
+/* HERO SECTION STYLES */
+
+.hero {
+    text-align: center;
+}
+
+.hero__heading {
+    font-size: var(--fs-400);
+    line-height: var(--lh-200);
+
+    @include u.breakpoint(xlarge) {
+        font-size: var(--fs-600);
+        line-height: var(--lh-100);
+    }
+}
+
+.accent {
+    color: var(--clr-accent-100);
+    font-style: normal;
+}

@@ -1,0 +1,17 @@
+
+@use '../globals/utilities' as u;
+
+/* PRICING SECTION STYLES */
+
+.pricing__intro__heading {
+    font-size: var(--fs-300);
+
+    @include u.breakpoint(large) {
+        font-size: var(--fs-400);
+    }
+}
+
+.price {
+    font-size: var(--fs-500);
+    line-height: var(--lh-300);
+}

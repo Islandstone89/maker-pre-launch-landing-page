@@ -1,0 +1,12 @@
+
+@use '../globals/utilities' as u;
+
+/* FOOTER STYLES */
+
+.footer__heading {
+    font-size: var(--fs-300);
+
+    @include u.breakpoint(large) {
+        font-size: var(--fs-400);
+    }
+}

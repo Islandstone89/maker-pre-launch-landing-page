@@ -1,0 +1,24 @@
+
+@use '../globals/utilities' as u;
+
+/* HEADER STYLES */
+
+.header {
+    padding-block-start: var(--space-700);
+
+    @include u.breakpoint(medium) {
+        padding-block-start: var(--space-800);
+    }
+
+    @include u.breakpoint(large) {
+        padding-block-start: var(--space-1100);
+    }
+}
+
+.logo {
+    margin-inline: auto;
+
+    @include u.breakpoint(medium) {
+        margin-inline: initial;
+    }
+}

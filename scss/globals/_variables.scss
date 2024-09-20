@@ -26,6 +26,7 @@
     --size-48: 3rem;
     --size-56: 3.5rem;
     --size-72: 4.5rem;
+    --size-80: 5rem;
 
     --lh-116: 1.16;
     --lh-125: 1.25;
@@ -53,7 +54,6 @@
     --fs-400: var(--size-32);
     --fs-500: var(--size-40);
     --fs-600: var(--size-48);
-    --fs-700: var(--size-56);
 
     --lh-100: var(--lh-116);
     --lh-200: var(--lh-125);
@@ -71,4 +71,5 @@
     --space-800: var(--size-48);
     --space-900: var(--size-56);
     --space-1000: var(--size-72);
+    --space-1100: var(--size-80);
 }

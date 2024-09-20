@@ -5,6 +5,7 @@ body {
     background-color: var(--clr-primary-300);
     color: var(--clr-primary-200);
     font-family: var(--ff-primary);
+    font-size: var(--fs-100);
     font-weight: var(--fw-medium);
     line-height: var(--lh-500);
 }
@@ -12,6 +13,7 @@ body {
 :is(h1, h2, h3) {
     color: var(--clr-primary-100);
     font-weight: var(--fw-extra-bold);
+    font-size: var(--fs-200);
     line-height: var(--lh-400);
 }
 
