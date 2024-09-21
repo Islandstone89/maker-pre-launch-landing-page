@@ -135,7 +135,7 @@
 
       <div class="pricing__plans">
 
-        <div class="pricing__plan">
+        <div class="pricing__plan pricing__plan-1">
           <h3 class="pricing__plan__heading">Dip your toe</h3>
           <p class="pricing__plan__tagline">Just getting started? No problem at all! Our free plan will take you a long way.</p>
 
@@ -149,7 +149,7 @@
           </ul><!-- end pricing__plan__list -->
         </div><!-- end pricing__plan -->
 
-        <div class="pricing__plan">
+        <div class="pricing__plan pricing__plan-2">
           <h3 class="pricing__plan__heading">Dive right in</h3>
           <p class="pricing__plan__tagline">Ready for the big time? Our paid plan will help you take your business to the next level.</p>
 
@@ -171,9 +171,16 @@
     <h2 class="footer__heading">Get notified when we launch</h2>
 
     <form class="form">
-      <label for="emailInput">Email address</label>
-      <input type="email" name="email" id="emailInput">
+
+      <div class="form__input__wrapper">
+        <label for="emailInput">Email address</label>
+        <input type="email" name="email" class="email-input" id="emailInput" autocomplete="email" aria-describedby="no-value no-email" aria-invalid="false">
+        <p class="form__error" id="no-value">Oops! Please add your email</p>
+        <p class="form__error" id="no-email">Oops! That doesn’t look like an email address</p>
+      </div><!-- end form__input__wrapper -->
+
       <button class="btn form-btn">Get notified</button>
+
     </form><!-- end form -->
   </footer><!-- end footer -->
 

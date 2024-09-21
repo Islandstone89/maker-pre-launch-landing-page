@@ -22,3 +22,39 @@
         --flow-space: var(--space-700);
     }
 }
+
+.email-input {
+    border: 2px solid transparent;
+    border-radius: var(--space-px-100);
+    padding: var(--space-px-100) 0 var(--space-px-100) var(--space-px-200);
+    background-color: var(--clr-accent-300);
+    color: var(--clr-primary-100);
+}
+
+.form__error {
+    color: var(--clr-accent-200);
+    display: nones;
+}
+
+.form-btn {
+    --border-width: 2px;
+    --border-style: solid;
+    --border-color: transparent;
+    --btn-bg: var(--clr-accent-100);
+    --btn-color: var(--clr-accent-300);
+
+    border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: var(--space-px-100);
+    padding: var(--space-px-100) var(--space-px-400);
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+    font-weight: var(--fw-extra-bold);
+    cursor: pointer;
+    transition: ease-in-out .25s;
+
+    &:is(:hover, :focus-visible) {
+        --border-color: var(--clr-accent-100);
+        --btn-bg: transparent;
+        --btn-color: var(--clr-primary-100);
+    }
+}

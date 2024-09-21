@@ -29,6 +29,11 @@
     --size-72: 4.5rem;
     --size-80: 5rem;
 
+    --size-px-12: 12px;
+    --size-px-18: 18px;
+    --size-px-24: 24px;
+    --size-px-42: 42px;
+
     --lh-116: 1.16;
     --lh-125: 1.25;
     --lh-137: 1.375;
@@ -74,4 +79,9 @@
     --space-1000: var(--size-64);
     --space-1100: var(--size-72);
     --space-1200: var(--size-80);
+
+    --space-px-100: var(--size-px-12);
+    --space-px-200: var(--size-px-18);
+    --space-px-300: var(--size-px-24);
+    --space-px-400: var(--size-px-42);
 }
