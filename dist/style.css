@@ -185,6 +185,7 @@ body {
   font-size: var(--fs-100);
   font-weight: var(--fw-medium);
   line-height: var(--lh-500);
+  padding: 1rem;
   --max-width: 70rem;
   --content-margin: 4rem;
   display: grid;
@@ -352,6 +353,7 @@ body > * {
   padding: var(--space-px-100) 0 var(--space-px-100) var(--space-px-200);
   background-color: var(--clr-accent-300);
   color: var(--clr-primary-100);
+  width: 100%;
 }
 
 .form__error {
@@ -373,6 +375,7 @@ body > * {
   font-weight: var(--fw-extra-bold);
   cursor: pointer;
   transition: ease-in-out 0.25s;
+  width: 100%;
 }
 .form-btn:is(:hover, :focus-visible) {
   --border-color: var(--clr-accent-100);

@@ -29,6 +29,7 @@
     padding: var(--space-px-100) 0 var(--space-px-100) var(--space-px-200);
     background-color: var(--clr-accent-300);
     color: var(--clr-primary-100);
+    width: 100%;
 }
 
 .form__error {
@@ -51,6 +52,7 @@
     font-weight: var(--fw-extra-bold);
     cursor: pointer;
     transition: ease-in-out .25s;
+    width: 100%;
 
     &:is(:hover, :focus-visible) {
         --border-color: var(--clr-accent-100);
