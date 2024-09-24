@@ -16,6 +16,10 @@
     line-height: var(--lh-300);
 }
 
+.pricing__plan {
+    padding-inline: var(--space-600);
+}
+
 .pricing__plan-1 {
     background-color: var(--clr-accent-300);
     color: var(--clr-primary-100);

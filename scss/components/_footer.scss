@@ -5,7 +5,7 @@
 
 .footer {
     text-align: center;
-    padding-block-end: var(--space-1300);
+    padding-block: var(--space-1300);
 }
 
 .footer__heading {
@@ -19,14 +19,22 @@
 .form {
     --flow-space: var(--space-600);
     --gap: var(--space-px-400);
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
     align-items: center;
     gap: var(--gap);
+    grid-template-areas: 
+    "input"
+    "button";
     
     @include u.breakpoint(large) {
         --flow-space: var(--space-700);
         --gap: var(--space-px-200);
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "input button";
     }
 }
 
@@ -38,11 +46,12 @@
     background-color: var(--clr-accent-300);
     color: var(--clr-primary-100);
     width: 100%;
+    grid-area: input;
 }
 
 .form__error {
     color: var(--clr-accent-200);
-    display: none;
+    display: nones;
 }
 
 .form-btn {
@@ -61,6 +70,7 @@
     cursor: pointer;
     transition: ease-in-out .25s;
     width: 100%;
+    grid-area: button;
 
     &:is(:hover, :focus-visible) {
         --border-color: var(--clr-accent-100);
