@@ -110,7 +110,9 @@ textarea:not([rows]) {
   --size-64: 4rem;
   --size-72: 4.5rem;
   --size-80: 5rem;
+  --size-128: 8rem;
   --size-px-12: 12px;
+  --size-px-16: 16px;
   --size-px-18: 18px;
   --size-px-24: 24px;
   --size-px-42: 42px;
@@ -152,10 +154,12 @@ textarea:not([rows]) {
   --space-1000: var(--size-64);
   --space-1100: var(--size-72);
   --space-1200: var(--size-80);
+  --space-1300: var(--size-128);
   --space-px-100: var(--size-px-12);
-  --space-px-200: var(--size-px-18);
-  --space-px-300: var(--size-px-24);
-  --space-px-400: var(--size-px-42);
+  --space-px-200: var(--size-px-16);
+  --space-px-300: var(--size-px-18);
+  --space-px-400: var(--size-px-24);
+  --space-px-500: var(--size-px-42);
 }
 
 /* UTILITIES */
@@ -327,6 +331,7 @@ body > * {
 /* FOOTER STYLES */
 .footer {
   text-align: center;
+  padding-block-end: var(--space-1300);
 }
 
 .footer__heading {
@@ -340,16 +345,23 @@ body > * {
 
 .form {
   --flow-space: var(--space-600);
+  --gap: var(--space-px-400);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap);
 }
 @media (width > 56.25rem) {
   .form {
     --flow-space: var(--space-700);
+    --gap: var(--space-px-200);
   }
 }
 
 .email-input {
+  --flow-space: var(--space-200);
   border: 2px solid transparent;
-  border-radius: var(--space-px-100);
+  border-radius: var(--space-px-400);
   padding: var(--space-px-100) 0 var(--space-px-100) var(--space-px-200);
   background-color: var(--clr-accent-300);
   color: var(--clr-primary-100);
@@ -358,7 +370,7 @@ body > * {
 
 .form__error {
   color: var(--clr-accent-200);
-  display: nones;
+  display: none;
 }
 
 .form-btn {
@@ -368,7 +380,7 @@ body > * {
   --btn-bg: var(--clr-accent-100);
   --btn-color: var(--clr-accent-300);
   border: var(--border-width) var(--border-style) var(--border-color);
-  border-radius: var(--space-px-100);
+  border-radius: var(--space-px-400);
   padding: var(--space-px-100) var(--space-px-400);
   background-color: var(--btn-bg);
   color: var(--btn-color);
