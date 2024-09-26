@@ -362,22 +362,36 @@ body > * {
 
 .form {
   --flow-space: var(--space-600);
-  --gap: var(--space-px-400);
+  --gap: var(--space-px-100);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto auto auto auto auto;
   align-items: center;
   gap: var(--gap);
-  grid-template-areas: "input" "button";
 }
 @media (width > 56.25rem) {
   .form {
     --flow-space: var(--space-700);
-    --gap: var(--space-px-200);
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "input button";
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: auto auto auto auto;
   }
+}
+
+.form__input__wrapper {
+  grid-column: 1/-1;
+  grid-row: 1/5;
+  display: grid;
+  grid-template-rows: subgrid;
+}
+@media (width > 56.25rem) {
+  .form__input__wrapper {
+    grid-column: 1/2;
+  }
+}
+
+.email-label {
+  text-align: initial;
+  grid-row: 1/2;
 }
 
 .email-input {
@@ -388,12 +402,20 @@ body > * {
   background-color: var(--clr-accent-300);
   color: var(--clr-primary-100);
   width: 100%;
-  grid-area: input;
+  grid-row: 2/3;
 }
 
 .form__error {
   color: var(--clr-accent-200);
   display: nones;
+}
+
+.form__error__no-value {
+  grid-row: 3/4;
+}
+
+.form__error__no-email {
+  grid-row: 4/5;
 }
 
 .form-btn {
@@ -411,10 +433,18 @@ body > * {
   cursor: pointer;
   transition: ease-in-out 0.25s;
   width: 100%;
-  grid-area: button;
+  grid-column: 1/-1;
+  grid-row: 5/6;
+  align-self: center;
 }
 .form-btn:is(:hover, :focus-visible) {
   --border-color: var(--clr-accent-100);
   --btn-bg: transparent;
   --btn-color: var(--clr-primary-100);
+}
+@media (width > 56.25rem) {
+  .form-btn {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
 }/*# sourceMappingURL=style.css.map */
