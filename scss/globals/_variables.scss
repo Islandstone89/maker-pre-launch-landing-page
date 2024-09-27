@@ -8,6 +8,7 @@
     --clr-aqua: hsl(179, 80%, 58%);
     --clr-red: hsl(343, 100%, 58%);
     --clr-grey: hsl(225, 14%, 63%);
+    --clr-grey-darker: hsl(225, 14%, 43%);
     --clr-dark-blue: hsl(206, 84%, 22%);
     --clr-extra-dark-blue: hsl(230, 60%, 8%);
 
@@ -51,12 +52,13 @@
     --clr-accent-100: var(--clr-aqua);
     --clr-accent-200: var(--clr-red);
     --clr-accent-300: var(--clr-dark-blue);
+    --clr-accent-400: var(--clr-grey-darker);
 
     --ff-primary: var(--ff-sans-serif);
     --fw-medium: var(--fw-500);
     --fw-extra-bold: var(--fw-800);
 
-    --fs-100: var(var(--size-16));
+    --fs-100: var(--size-16);
     --fs-200: var(--size-18);
     --fs-300: var(--size-24);
     --fs-400: var(--size-32);
