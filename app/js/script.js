@@ -12,15 +12,18 @@ let emailSymbol = "@";
 
 function checkValue(e) {
     e.preventDefault();
+
     if (emailInput.value === "") {
         errorValue.style.display = "block"
         successMessage.style.display = "none"
     }
+
     else if (!emailInput.value.includes(emailSymbol)) {
         errorEmail.style.display = "block"
         errorValue.style.display = "none"
         successMessage.style.display = "none"
     }
+    
     else {
         errorValue.style.display = "none"
         errorEmail.style.display = "none"
