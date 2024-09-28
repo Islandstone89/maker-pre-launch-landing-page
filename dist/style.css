@@ -38,6 +38,11 @@ h3, h4 {
   text-wrap: balance;
 }
 
+/* Avoid orphans on paragraphs */
+p {
+  text-wrap: pretty;
+}
+
 /* Remove default link styles */
 a {
   -webkit-text-decoration-skip: ink;
