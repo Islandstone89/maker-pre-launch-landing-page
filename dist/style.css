@@ -95,6 +95,7 @@ textarea:not([rows]) {
   --clr-grey-darker: hsl(225, 14%, 43%);
   --clr-dark-blue: hsl(206, 84%, 22%);
   --clr-extra-dark-blue: hsl(230, 60%, 8%);
+  --clr-green: hsl(120, 61%, 70%);
   --ff-sans-serif: "Manrope", sans-serif;
   --fw-500: 500;
   --fw-800: 800;
@@ -130,6 +131,7 @@ textarea:not([rows]) {
   --clr-accent-200: var(--clr-red);
   --clr-accent-300: var(--clr-dark-blue);
   --clr-accent-400: var(--clr-grey-darker);
+  --clr-accent-500: var(--clr-green);
   --ff-primary: var(--ff-sans-serif);
   --fw-medium: var(--fw-500);
   --fw-extra-bold: var(--fw-800);
@@ -437,33 +439,43 @@ body > * {
   --gap: var(--space-px-100);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
   align-items: center;
   gap: var(--gap);
+  /*   &:has(.email-input[aria-invalid="true"]) {
+       .form__error__no-value {
+        display: block;
+       }
+    } */
 }
 @media (width > 56.25rem) {
   .form {
     --flow-space: var(--space-700);
     grid-template-columns: 5fr 2fr;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto;
   }
 }
 
 .form__input__wrapper {
   grid-column: 1/-1;
-  grid-row: 1/5;
+  grid-row: 1/4;
   display: grid;
   grid-template-rows: subgrid;
 }
 @media (width > 56.25rem) {
   .form__input__wrapper {
     grid-column: 1/2;
+    grid-row: 1/4;
   }
 }
 
 .email-label {
-  text-align: initial;
   grid-row: 1/2;
+}
+@media (width > 56.25rem) {
+  .email-label {
+    text-align: initial;
+  }
 }
 
 .email-input {
@@ -477,17 +489,37 @@ body > * {
   grid-row: 2/3;
 }
 
-.form__error {
-  color: var(--clr-accent-200);
-  display: nones;
-}
-
 .form__error__no-value {
   grid-row: 3/4;
+  color: var(--clr-accent-200);
+  display: none;
+}
+@media (width > 56.25rem) {
+  .form__error__no-value {
+    text-align: initial;
+  }
 }
 
 .form__error__no-email {
-  grid-row: 4/5;
+  grid-row: 3/4;
+  color: var(--clr-accent-200);
+  display: none;
+}
+@media (width > 56.25rem) {
+  .form__error__no-email {
+    text-align: initial;
+  }
+}
+
+.form__success {
+  grid-row: 3/4;
+  display: none;
+  color: var(--clr-accent-500);
+}
+@media (width > 56.25rem) {
+  .form__success {
+    text-align: initial;
+  }
 }
 
 .form-btn {

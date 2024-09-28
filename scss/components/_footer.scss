@@ -21,31 +21,41 @@
     --gap: var(--space-px-100);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
     align-items: center;
     gap: var(--gap);
     
     @include u.breakpoint(large) {
         --flow-space: var(--space-700);
         grid-template-columns: 5fr 2fr;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto;
     }
+
+  /*   &:has(.email-input[aria-invalid="true"]) {
+       .form__error__no-value {
+        display: block;
+       }
+    } */
 }
 
 .form__input__wrapper {
     grid-column: 1 / -1;
-    grid-row: 1 / 5;
+    grid-row: 1 / 4;
     display: grid;
     grid-template-rows: subgrid;
 
     @include u.breakpoint(large) {
         grid-column: 1 / 2;
+        grid-row: 1 / 4;
     }
 }
 
 .email-label {
-    text-align: initial;
     grid-row: 1 / 2;
+    
+    @include u.breakpoint(large) {
+        text-align: initial;
+    }
 }
 
 .email-input {
@@ -59,17 +69,34 @@
     grid-row: 2 / 3;
 }
 
-.form__error {
-    color: var(--clr-accent-200);
-    display: nones;
-}
-
 .form__error__no-value {
     grid-row: 3 / 4;
+    color: var(--clr-accent-200);
+    display: none;
+
+    @include u.breakpoint(large) {
+        text-align: initial;
+    }
 }
 
 .form__error__no-email {
-    grid-row: 4 / 5;
+    grid-row: 3 / 4;
+    color: var(--clr-accent-200);
+    display: none;
+
+    @include u.breakpoint(large) {
+        text-align: initial;
+    }
+}
+
+.form__success {
+    grid-row: 3 / 4;
+    display: none;
+    color: var(--clr-accent-500);
+
+    @include u.breakpoint(large) {
+        text-align: initial;
+    }
 }
 
 .form-btn {

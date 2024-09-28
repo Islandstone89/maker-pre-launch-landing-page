@@ -7,6 +7,7 @@
   <title>Frontend Mentor | Maker pre-launch landing page</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="/dist/style.css">
+  <script defer src="/app/js/script.js"></script>
 </head>
 <body>
 
@@ -234,13 +235,14 @@
   <footer class="footer flow">
     <h2 class="footer__heading">Get notified when we launch</h2>
 
-    <form class="form">
+    <form class="form" novalidate>
 
       <div class="form__input__wrapper">
         <label for="emailInput" class="email-label">Email address</label>
         <input type="email" name="email" class="email-input" id="emailInput" autocomplete="email" aria-describedby="no-value no-email" aria-invalid="false">
         <p class="form__error form__error__no-value" id="no-value">Oops! Please add your email</p>
         <p class="form__error form__error__no-email" id="no-email">Oops! That doesn’t look like an email address</p>
+        <p class="form__success">Success!</p>
       </div><!-- end form__input__wrapper -->
 
       <button class="btn form-btn">Get notified</button>
