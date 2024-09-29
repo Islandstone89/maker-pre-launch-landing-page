@@ -126,6 +126,8 @@ textarea:not([rows]) {
   --size-px-40: 40px;
   --size-px-48: 48px;
   --size-px-56: 56px;
+  --size-px-140: 140px;
+  --size-px-200: 200px;
   --lh-116: 1.16;
   --lh-125: 1.25;
   --lh-137: 1.375;
@@ -175,6 +177,8 @@ textarea:not([rows]) {
   --space-px-600: var(--size-px-40);
   --space-px-700: var(--size-px-48);
   --space-px-800: var(--size-px-56);
+  --space-px-900: var(--size-px-140);
+  --space-px-1000: var(--size-px-200);
 }
 
 /* UTILITIES */
@@ -260,6 +264,8 @@ body > * {
 .hero__heading {
   font-size: var(--fs-400);
   line-height: var(--lh-200);
+  max-width: 25ch;
+  margin-inline: auto;
 }
 @media (width > 68.75rem) {
   .hero__heading {
@@ -279,7 +285,7 @@ body > * {
 
 .hero__icon {
   --flow-space: var(--space-600);
-  margin: auto;
+  margin-inline: auto;
 }
 @media (width > 68.75rem) {
   .hero__icon {
@@ -288,6 +294,10 @@ body > * {
 }
 
 /* BENEFITS SECTION STYLES */
+.benefits {
+  padding-block: var(--space-px-900);
+}
+
 .benefit__grid {
   --gap: var(--space-px-800);
   display: grid;
@@ -298,6 +308,7 @@ body > * {
 @media (width > 43.75rem) {
   .benefit__grid {
     --gap: var(--space-px-600);
+    text-align: initial;
   }
 }
 @media (width > 56.25rem) {

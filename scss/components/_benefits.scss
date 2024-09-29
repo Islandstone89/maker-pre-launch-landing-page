@@ -3,6 +3,10 @@
 
 /* BENEFITS SECTION STYLES */
 
+.benefits {
+    padding-block: var(--space-px-900);
+}
+
 .benefit__grid {
     --gap: var(--space-px-800);
     display: grid;
@@ -12,6 +16,7 @@
 
     @include u.breakpoint(medium) {
         --gap: var(--space-px-600);
+        text-align: initial;
     }
 
     @include u.breakpoint(large) {

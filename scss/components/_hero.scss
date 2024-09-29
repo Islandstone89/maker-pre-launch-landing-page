@@ -10,6 +10,8 @@
 .hero__heading {
     font-size: var(--fs-400);
     line-height: var(--lh-200);
+    max-width: 25ch;
+    margin-inline: auto;
 
     @include u.breakpoint(xlarge) {
         font-size: var(--fs-600);
@@ -28,7 +30,7 @@
 
 .hero__icon {
     --flow-space: var(--space-600);
-    margin: auto;
+    margin-inline: auto;
 
     @include u.breakpoint(xlarge) {
         --flow-space: var(--space-1000);
