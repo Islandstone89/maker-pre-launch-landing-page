@@ -28,6 +28,7 @@
 
 .hero__icon {
     --flow-space: var(--space-600);
+    margin: auto;
 
     @include u.breakpoint(xlarge) {
         --flow-space: var(--space-1000);

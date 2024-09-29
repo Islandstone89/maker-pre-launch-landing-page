@@ -51,11 +51,11 @@ a {
   text-decoration: none;
 }
 
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
+/*
+  Improve media defaults */
+:is(img, picture, video, canvas, svg) {
   display: block;
+  max-width: 100%;
   height: auto;
 }
 
@@ -122,7 +122,10 @@ textarea:not([rows]) {
   --size-px-16: 16px;
   --size-px-18: 18px;
   --size-px-24: 24px;
-  --size-px-42: 42px;
+  --size-px-32: 32px;
+  --size-px-40: 40px;
+  --size-px-48: 48px;
+  --size-px-56: 56px;
   --lh-116: 1.16;
   --lh-125: 1.25;
   --lh-137: 1.375;
@@ -168,7 +171,10 @@ textarea:not([rows]) {
   --space-px-200: var(--size-px-16);
   --space-px-300: var(--size-px-18);
   --space-px-400: var(--size-px-24);
-  --space-px-500: var(--size-px-42);
+  --space-px-500: var(--size-px-32);
+  --space-px-600: var(--size-px-40);
+  --space-px-700: var(--size-px-48);
+  --space-px-800: var(--size-px-56);
 }
 
 /* UTILITIES */
@@ -273,6 +279,7 @@ body > * {
 
 .hero__icon {
   --flow-space: var(--space-600);
+  margin: auto;
 }
 @media (width > 68.75rem) {
   .hero__icon {
@@ -281,31 +288,57 @@ body > * {
 }
 
 /* BENEFITS SECTION STYLES */
-.benefits {
-  --grid-gap: var(--space-900);
-  --columns: 1;
+.benefit__grid {
+  --gap: var(--space-px-800);
   display: grid;
-  grid-template-columns: repeat(var(--columns), 1fr);
-  gap: var(--grid-gap);
+  grid-template-columns: auto;
+  gap: var(--gap);
+  text-align: center;
 }
 @media (width > 43.75rem) {
-  .benefits {
-    --grid-gap: var(--space-400);
+  .benefit__grid {
+    --gap: var(--space-px-600);
   }
 }
 @media (width > 56.25rem) {
-  .benefits {
-    --columns: 4;
-    --grid-gap: var(--space-1200);
+  .benefit__grid {
+    --gap: var(--space-px-500);
+    grid-template-columns: repeat(4, auto);
   }
 }
 
 .benefit {
-  --grid-gap: var(--space-600);
+  --gap: var(--space-px-500);
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-  gap: var(--grid-gap);
+  justify-items: center;
+  gap: var(--gap);
+}
+@media (width > 43.75rem) {
+  .benefit {
+    --gap: var(--space-px-800);
+  }
+}
+@media (width > 56.25rem) {
+  .benefit {
+    --gap: var(--space-px-700);
+  }
+}
+
+.benefit__icon-wrapper {
+  --wrapper-width: 120px;
+  --wrapper-height: 124px;
+  background-color: var(--clr-accent-300);
+  border-radius: 45px;
+  display: grid;
+  place-content: center;
+  width: var(--wrapper-width);
+  height: var(--wrapper-height);
+}
+@media (width > 56.25rem) {
+  .benefit__icon-wrapper {
+    --wrapper-width: 160px;
+    --wrapper-height: 164px;
+  }
 }
 
 /* PRICING SECTION STYLES */

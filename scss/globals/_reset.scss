@@ -53,11 +53,12 @@ a {
   text-decoration: none;
 }
 
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
+/*
+  Improve media defaults */
+
+:is(img, picture, video, canvas, svg) {
   display: block;
+  max-width: 100%;
   height: auto;
 }
 

@@ -36,7 +36,10 @@
     --size-px-16: 16px;
     --size-px-18: 18px;
     --size-px-24: 24px;
-    --size-px-42: 42px;
+    --size-px-32: 32px;
+    --size-px-40: 40px;
+    --size-px-48: 48px;
+    --size-px-56: 56px;
 
     --lh-116: 1.16;
     --lh-125: 1.25;
@@ -91,5 +94,8 @@
     --space-px-200: var(--size-px-16);
     --space-px-300: var(--size-px-18);
     --space-px-400: var(--size-px-24);
-    --space-px-500: var(--size-px-42);
+    --space-px-500: var(--size-px-32);
+    --space-px-600: var(--size-px-40);
+    --space-px-700: var(--size-px-48);
+    --space-px-800: var(--size-px-56);
 }
