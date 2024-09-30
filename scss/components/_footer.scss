@@ -6,6 +6,9 @@
 .footer {
     text-align: center;
     padding-block: var(--space-1300);
+    background-image: url('/img/bg-footer-squiggle.svg');
+    background-repeat: no-repeat;
+    background-position: top 50% left 50%;
 }
 
 .footer__heading {

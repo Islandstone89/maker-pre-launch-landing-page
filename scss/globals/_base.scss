@@ -1,4 +1,6 @@
 
+@use '../globals/utilities' as u;
+
 /* BASE STYLES */
 
 body {
@@ -8,20 +10,6 @@ body {
     font-size: var(--fs-100);
     font-weight: var(--fw-medium);
     line-height: var(--lh-500);
-    padding: 1rem;
-
-    --max-width: 70rem;
-    --content-margin: 8rem;
-    display: grid;
-    grid-template-columns: 
-    [fb-start]1fr 
-    [content-start] minmax(min(100% - var(--content-margin)), var(--max-width)) 
-    [content-end] 1fr
-    [fb-end];
-
-    & > * {
-        grid-column: content;
-    }
 }
 
 :is(h1, h2, h3) {
@@ -31,10 +19,27 @@ body {
     line-height: var(--lh-400);
 }
 
-/*
-    16px - 25 = 1.66 (113)
-    18px - 25 = 1.39 (31)
-    32px - 44 - 1.375 (7)
-    40px - 55 = 1.375 (9)
-    48px - 56 = 1.16 (5)
-*/
+:is(.header, .footer) > * {
+    padding-inline: var(--space-px-400);
+
+    @include u.breakpoint(medium) {
+        padding-inline: var(--space-px-900);
+    }
+
+    @include u.breakpoint(large) {
+        padding-inline: var(--space-px-1000);
+    }
+}
+
+main section > * {
+    padding-inline: var(--space-px-400);
+
+    @include u.breakpoint(medium) {
+        padding-inline: var(--space-px-900);
+    }
+
+    @include u.breakpoint(large) {
+        padding-inline: var(--space-px-1000);
+    }
+}
+

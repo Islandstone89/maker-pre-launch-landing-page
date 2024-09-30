@@ -4,7 +4,31 @@
 /* HERO SECTION STYLES */
 
 .hero {
+    position: relative;
     text-align: center;
+    padding-block-start: var(--space-px-800);
+    padding-block-end: var(--space-px-1000);
+    overflow: hidden;
+
+    @include u.breakpoint(medium) {
+        padding-block-end: var(--space-px-1200);
+    }
+}
+
+.hero-images {
+    padding-inline: 0;
+
+    img {
+        z-index: 0;
+    }
+}
+
+.hero__intro {
+    margin-block-start: var(--space-px-700);
+
+    p {
+        z-index: 99
+    }
 }
 
 .hero__heading {
@@ -26,13 +50,82 @@
 
 .hero__text {
     --flow-space: var(--space-400);
+    max-width: 45ch;
+    margin-inline: auto;
 }
 
 .hero__icon {
     --flow-space: var(--space-600);
     margin-inline: auto;
 
-    @include u.breakpoint(xlarge) {
+    @include u.breakpoint(large) {
         --flow-space: var(--space-1000);
     }
+}
+
+.hero-mobile {
+    
+    @include u.breakpoint(medium) {
+        display: none;
+    }
+}
+
+.hero-left{
+    display: none;
+
+    @include u.breakpoint(medium) {
+        position: absolute;
+        top: 0;
+        display: block;
+        translate: -60%;
+    }
+
+    @include u.breakpoint(xlarge) {
+        position: absolute;
+        top: 0;
+        display: block;
+        translate: -20%;
+    }
+}
+
+.hero-right {
+    display: none;
+
+    @include u.breakpoint(medium) {
+        position: absolute;
+        top: 0;
+        right: -30%;
+        display: block;
+    }
+
+    @include u.breakpoint(xlarge) {
+        position: absolute;
+        top: 0;
+        display: block;
+        right: -5%;
+    }
+}
+
+.hero-squiggle {
+    display: none;
+
+    @include u.breakpoint(medium) {
+        position: absolute;
+        top: 0;
+        display: block;
+        translate: 30% 10%;
+    }
+
+    @include u.breakpoint(xlarge) {
+        position: absolute;
+        top: 0;
+        display: block;
+        translate: 70%;
+    }
+}
+
+.hero-squiggle path:is(:hover) {
+    stroke: var(--clr-accent-600);
+    fill: transparent;
+    opacity: 1;
 }
