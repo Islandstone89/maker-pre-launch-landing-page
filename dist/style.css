@@ -320,18 +320,37 @@ body > * {
 
 .benefit {
   --gap: var(--space-px-500);
-  display: grid;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: var(--gap);
 }
 @media (width > 43.75rem) {
   .benefit {
     --gap: var(--space-px-800);
+    flex-direction: row;
   }
 }
 @media (width > 56.25rem) {
   .benefit {
     --gap: var(--space-px-700);
+    flex-direction: column;
+    align-items: initial;
+  }
+}
+@media (width > 43.75rem) {
+  .benefit:nth-child(odd) {
+    padding-inline-start: var(--space-px-800);
+  }
+}
+@media (width > 56.25rem) {
+  .benefit:nth-child(odd) {
+    padding-inline-start: initial;
+  }
+}
+@media (width > 56.25rem) {
+  .benefit:nth-child(even) {
+    padding-block-start: var(--space-px-700);
   }
 }
 
@@ -349,6 +368,12 @@ body > * {
   .benefit__icon-wrapper {
     --wrapper-width: 160px;
     --wrapper-height: 164px;
+  }
+}
+
+@media (width > 56.25rem) {
+  .benefit__text {
+    --flow-space: var(--space-400);
   }
 }
 

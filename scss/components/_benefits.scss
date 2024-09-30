@@ -27,16 +27,38 @@
 
 .benefit {
     --gap: var(--space-px-500);
-    display: grid;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: var(--gap);
 
     @include u.breakpoint(medium) {
         --gap: var(--space-px-800);
+        flex-direction: row;
     }
 
     @include u.breakpoint(large) {
         --gap: var(--space-px-700);
+        flex-direction: column;
+        align-items: initial;
+    }
+
+    &:nth-child(odd) {
+
+        @include u.breakpoint(medium) {
+            padding-inline-start: var(--space-px-800);
+        }
+    
+        @include u.breakpoint(large) {
+            padding-inline-start: initial;
+        }
+    }
+
+    &:nth-child(even) {
+        
+        @include u.breakpoint(large) {
+            padding-block-start: var(--space-px-700);
+        }
     }
 }
 
@@ -53,5 +75,12 @@
     @include u.breakpoint(large) {
         --wrapper-width: 160px;
         --wrapper-height: 164px;
+    }
+}
+
+.benefit__text {
+
+    @include u.breakpoint(large) {
+        --flow-space: var(--space-400);
     }
 }
