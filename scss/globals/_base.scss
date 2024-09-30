@@ -19,7 +19,7 @@ body {
     line-height: var(--lh-400);
 }
 
-:is(.header, .footer) > * {
+:is(.header, .footer) {
     padding-inline: var(--space-px-400);
 
     @include u.breakpoint(medium) {

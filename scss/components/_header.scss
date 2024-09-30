@@ -5,9 +5,11 @@
 
 .header {
     padding-block-start: var(--space-700);
+    
 
     @include u.breakpoint(medium) {
         padding-block-start: var(--space-800);
+        padding-block-end: var(--space-900);
     }
 
     @include u.breakpoint(large) {

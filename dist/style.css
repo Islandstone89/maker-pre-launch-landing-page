@@ -223,16 +223,16 @@ body {
   line-height: var(--lh-400);
 }
 
-:is(.header, .footer) > * {
+:is(.header, .footer) {
   padding-inline: var(--space-px-400);
 }
 @media (width > 43.75rem) {
-  :is(.header, .footer) > * {
+  :is(.header, .footer) {
     padding-inline: var(--space-px-900);
   }
 }
 @media (width > 56.25rem) {
-  :is(.header, .footer) > * {
+  :is(.header, .footer) {
     padding-inline: var(--space-px-1000);
   }
 }
@@ -258,6 +258,7 @@ main section > * {
 @media (width > 43.75rem) {
   .header {
     padding-block-start: var(--space-800);
+    padding-block-end: var(--space-900);
   }
 }
 @media (width > 56.25rem) {
