@@ -51,8 +51,7 @@ a {
   text-decoration: none;
 }
 
-/*
-  Improve media defaults */
+/* Improve media defaults */
 :is(img, picture, video, canvas, svg) {
   display: block;
   max-width: 100%;
